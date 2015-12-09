@@ -22,3 +22,8 @@ script:
   - which python && coverage xml -o shippable/codecoverage/coverage.xml test.py
 
 archive: true
+
+notifications:
+  email:
+    varsha@shippable.com
+  irc: "chat.freenode.net#test-irc"
