@@ -6,7 +6,10 @@ python:
 install:
   - pip install -r requirements.txt
   
-#build_image: drydock/u14pytpls:prod
+services:
+  - postgres
+  
+build_image: drydock/u12pytpls:tip
 
 # Postgres binds to 127.0.0.1 by default and is started on boot. Default username is "postgres" with no password
 # Create a DB as part of before script to use it
