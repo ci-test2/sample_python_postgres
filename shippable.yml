@@ -6,8 +6,8 @@ python:
 install:
   - pip install -r requirements.txt
   
-services:
-  - postgres
+#services:
+ # - postgres
   
 build_image: drydock/u12pyt:prod
 
