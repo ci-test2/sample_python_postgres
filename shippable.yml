@@ -2,7 +2,7 @@ language: python
 
 python:
   - 2.7
-  - 3.2
+ # - 3.2
 
 install:
   - pip install -r requirements.txt
@@ -10,7 +10,8 @@ install:
 #services:
  # - postgres
   
-build_image: drydock/u12pyt:prod
+#build_image: drydock/u12pyt:prod
+build_image: shippable/minv2
 
 # Postgres binds to 127.0.0.1 by default and is started on boot. Default username is "postgres" with no password
 # Create a DB as part of before script to use it
