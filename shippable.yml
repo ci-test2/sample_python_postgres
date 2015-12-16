@@ -2,15 +2,17 @@ language: python
 
 python:
   - 2.7
- # - 3.2
+  - pypy
+  - 3.2
 
 install:
-  - pip install -r requirements.txt
+  #- pip install -r requirements.txt
+  - if [[ $TRAVIS_PYTHON_VERSION == '3.2' ]]; then pip install coverage==3.7.1 codecov ; fi
   
 #services:
  # - postgres
   
-build_image: drydock/u12pyt:prod
+build_image: drydock/u14pytall:tip
 #build_image: shippable/minv2
 
 # Postgres binds to 127.0.0.1 by default and is started on boot. Default username is "postgres" with no password
