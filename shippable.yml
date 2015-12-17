@@ -12,7 +12,7 @@ install:
 services:
   - postgres
   
-build_image: drydock/u14pytall:tip
+build_image: drydock/u12pytall:tip
 #build_image: shippable/minv2
 
 # Postgres binds to 127.0.0.1 by default and is started on boot. Default username is "postgres" with no password
